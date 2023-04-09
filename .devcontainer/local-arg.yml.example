@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  app:
+    build:
+      args:
+        GITLAB_USER: <your-gitlab-user>
+        GITLAB_ACCESS_TOKEN: <your-gitlab-access-token>

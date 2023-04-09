@@ -1,0 +1,20 @@
+{{define "header"}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ .Title}}</title>
+</head>
+
+<body>
+    <header>
+        <div id="common-header">
+            <h1>{{ .Title}}</h1>
+            <a href="{{ .GitubAuthCodeURL }}">Get Github Access token</a>
+        </br>
+            <a href="{{ .GoogleAuthCodeURL }}">Get Google Access token</a>
+        </div>
+    </header>
+
+{{end}}

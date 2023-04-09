@@ -1,0 +1,51 @@
+{
+  "go.testFlags": [
+    "-v"
+  ],
+  "go.inlayHints.assignVariableTypes": false,
+
+  "editor.fontFamily": "mono, monospace, Menlo, 'Inconsolata', 'Courier New'",
+  "files.autoSave": "afterDelay",
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "editor.inlayHints.fontFamily": "Monaco",
+
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast"
+  ],
+
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.go$",
+        "cmd": "go run github.com/segmentio/golines ${file} -w"
+      }
+    ]
+},
+"workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#fffaba",
+    "activityBar.background": "#fffaba",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#00bfb1",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#fffaba",
+    "statusBar.background": "#fff787",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#fff454",
+    "statusBarItem.remoteBackground": "#fff787",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#fff787",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#fff78799",
+    "titleBar.inactiveForeground": "#15202b99"
+},
+"peacock.color": "#fff787",
+"files.autoSaveDelay": 10000,
+
+}

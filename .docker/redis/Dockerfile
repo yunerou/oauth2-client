@@ -1,0 +1,6 @@
+FROM redis:7.0.8-alpine
+COPY redis.conf /usr/local/etc/redis/redis.conf
+CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
+
+
+# docker run redis redis-server /usr/local/etc/redis/redis.conf

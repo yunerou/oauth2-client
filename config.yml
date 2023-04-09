@@ -1,0 +1,47 @@
+VERSION: v0.1.0 # must follow pattern vXX.XX.XX for auto tag in CI
+ENV: local
+
+CHAT_WEBHOOK:
+  GOOGLE:
+    URL: https://chat.googleapis.com/v1/spaces/AAAA50ZBhX0/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=qsVffA94TgbVPsGOCwo_o1U6BPxiOATiUFJLrKGk7-c%3D
+
+
+LOG:
+  BEAUTIFUL: true
+  # ErrorLevel -1 DebugLevel 0  InfoLevel 1	WarnLevel 2	ErrorLevel 3
+  ZEROLOG_LEVEL: -1
+
+TRACE_ID_HEADER: X-TRACE-ID
+
+VIEWS_DIRECTORY: "./views"
+
+
+REDIS:
+  WRITER: redis
+  READER: redis
+  PORT: 6379
+  PASSWORD: veryStrongP@ssw0rd
+  DATABASE: 0
+
+
+
+SESSION:
+  COOKIENAME_PREFIX: "pfis"
+  TTL: 24h0m0s
+
+
+MAX_LENGTH_LOG_IN_BYTE: 99999
+
+DEFAULT_HTTP_CLIENT_TIMEOUT: 45s
+
+OAUTH2:
+  - Name: github
+    WellknownEndpoint: github
+    ClientID: 59d2b021cb8450365cab
+    ClientSecret: c40fe0e2a3759b3b1683691f5a1fd54fbd0d75c4
+    RedirectURL: http://localhost:8080/github/callback
+  - Name: google
+    WellknownEndpoint: google
+    ClientID: 542667274903-d1j0i3i0fis6k087ottsp8kq4nhdu5hk.apps.googleusercontent.com
+    ClientSecret: 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
+    RedirectURL: http://localhost:8080/google/callback
