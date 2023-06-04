@@ -27,8 +27,7 @@ func (d *commonPages) registerOauth2Provider() {
 	if err != nil {
 		panic("config file of OAUTH2 is wrong format")
 	}
-	fmt.Println("@@@@@@")
-	fmt.Println(viperConfigs)
+
 	for _, vConfig := range viperConfigs {
 		ep, sc := configEndpointAndScope(
 			vConfig.WellknownEndpoint,
